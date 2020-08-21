@@ -1,0 +1,12 @@
+sources:
+  - ./RepositorySource/
+templates:
+  - Carthage/Checkouts/FataMorgana/Template/Mock.stencil
+output: 
+  ./RepositorySource/mocks/generated/
+args:
+  # testableModule: "RepositorySource"
+  imports:
+  - PromiseKit
+  returnEmptyArray: false
+  returnEmptyDict: false

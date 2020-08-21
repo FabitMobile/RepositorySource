@@ -1,0 +1,7 @@
+sources:
+  - ./RepositorySource/
+templates:
+  - AutoHashable.stencil
+output: 
+  ./RepositorySource/
+args:

@@ -1,0 +1,7 @@
+sources:
+  - ./RepositorySource/
+templates:
+  - AutoEquatable.stencil
+output: 
+  ./RepositorySource/
+args:
