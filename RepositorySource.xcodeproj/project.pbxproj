@@ -14,7 +14,6 @@
 		1B2CA9BB63006C67DE91B616 /* BasePromisedDataObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC258CD53EE7C42C52C7534 /* BasePromisedDataObserver.swift */; };
 		1C18C0A4677681592FA62193 /* BaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8BA986786118A6DBAD5D5 /* BaseStorage.swift */; };
 		1CD7729CF096C2ED74C039F9 /* PromisedCoreDataSourceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA09309A01FBFB983758E77 /* PromisedCoreDataSourceRequest.swift */; };
-		1FFEBC699679A6529B03C9D6 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313DC586652B5136C58DE53 /* AutoEquatable.generated.swift */; };
 		2A23187600D0C7E24187A632 /* PromisedRemoteSourceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E32A31A4CF6E31B53D639 /* PromisedRemoteSourceResponse.swift */; };
 		2A690C716787B7EC280FAC8C /* ObjectArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD486B99A357B693EA7B78 /* ObjectArray.swift */; };
 		2B8EAF26052C3E63D2AB5B7E /* RemoteServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765E3743ADD5B20A9A74300 /* RemoteServiceResponse.swift */; };
@@ -123,7 +122,6 @@
 		AFB3FE0C30F4E68FF3172219 /* FoundationExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FoundationExtension.framework; sourceTree = "<group>"; };
 		B2E94CB0E072E36F594B106E /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reachability.framework; sourceTree = "<group>"; };
 		BA448344DA269945429760B3 /* BaseJsonTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseJsonTransformer.swift; sourceTree = "<group>"; };
-		C313DC586652B5136C58DE53 /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 		C4115BDDBE85905707EA6CF5 /* PromisedDataObserverByIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedDataObserverByIds.swift; sourceTree = "<group>"; };
 		CD09AFCA719387DBC8C4D228 /* OffsetLimitPaginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetLimitPaginator.swift; sourceTree = "<group>"; };
 		CF66CAF3AE4BEC97074F3C21 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 				9480C4DE95D3F1B64700201D /* DataLayer */,
 				91CC80B720C687C48ABE0135 /* DomainLayer */,
 				E5431869465B57AC2328F21B /* ServiceLayer */,
-				C313DC586652B5136C58DE53 /* AutoEquatable.generated.swift */,
 				D1FD8C1A78DAFFC1BD689355 /* Info.plist */,
 			);
 			path = RepositorySource;
@@ -451,7 +448,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F7EA1D8D1A0550524590FFA /* Build configuration list for PBXNativeTarget "RepositorySource" */;
 			buildPhases = (
-				33FC74C3EAF388556512E6A8 /* Run Script. Generate Equtables */,
 				E36B0CF329604AE3F4A8F99A /* Sources */,
 				F490F00C82EADE5D71A485C2 /* Frameworks */,
 			);
@@ -494,34 +490,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		33FC74C3EAF388556512E6A8 /* Run Script. Generate Equtables */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script. Generate Equtables";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sourcery --disableCache --config \"${SRCROOT}/sourcery_auto_equatable.yml\"";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		E36B0CF329604AE3F4A8F99A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC8292A65395F6E1215BB878 /* ApiErrors.swift in Sources */,
-				1FFEBC699679A6529B03C9D6 /* AutoEquatable.generated.swift in Sources */,
 				D17B6F60D52053472D588A93 /* BaseJsonTransformer.swift in Sources */,
 				1B2CA9BB63006C67DE91B616 /* BasePromisedDataObserver.swift in Sources */,
 				1C18C0A4677681592FA62193 /* BaseStorage.swift in Sources */,
