@@ -2,6 +2,3 @@ github "mxcl/PromiseKit" ~> 6.0
 github "ashleymills/Reachability.swift" ~> 5.0
 github "Yalantis/FastEasyMapping" ~> 1.0
 github "FabitMobile/FoundationExtension" ~> 1.0
-
-github "valnoc/Mirage" ~> 2.0
-github "valnoc/FataMorgana" ~> 2.0

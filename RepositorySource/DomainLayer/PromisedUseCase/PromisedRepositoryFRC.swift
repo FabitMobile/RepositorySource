@@ -5,7 +5,6 @@ public protocol PromisedRepositoryFRCDelegate: AnyObject {
     func frc(_ frc: PromisedRepositoryFRC, didUpdateObjects objects: [Any])
 }
 
-// sourcery: mirageMock
 public protocol PromisedRepositoryFRC: AnyObject {
     var predicate: NSPredicate? { get set }
 

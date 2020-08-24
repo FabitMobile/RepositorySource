@@ -18,7 +18,6 @@
 		2A23187600D0C7E24187A632 /* PromisedRemoteSourceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E32A31A4CF6E31B53D639 /* PromisedRemoteSourceResponse.swift */; };
 		2A690C716787B7EC280FAC8C /* ObjectArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD486B99A357B693EA7B78 /* ObjectArray.swift */; };
 		2B8EAF26052C3E63D2AB5B7E /* RemoteServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765E3743ADD5B20A9A74300 /* RemoteServiceResponse.swift */; };
-		2CC72DA0AA5A546490DC189C /* MockPromisedRepositoryFRC.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F654697B5A1B2DD58EDD5DE0 /* MockPromisedRepositoryFRC.generated.swift */; };
 		31F0736DD91D735D07FF4D08 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ABE2F33295E61932298201 /* Storable.swift */; };
 		3262FA68BB2D3A806E144B04 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB3FE0C30F4E68FF3172219 /* FoundationExtension.framework */; };
 		3629EF686D941E9B6A630DB1 /* ReachabilityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D8405F5AB425C76249781 /* ReachabilityError.swift */; };
@@ -36,11 +35,9 @@
 		5CF25AB95C19AA79F96E4CDA /* PromisedRemoteSourceErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733E4EA12ADD693B5A18F17 /* PromisedRemoteSourceErrorHandler.swift */; };
 		5F2F7B0FA3383F3129B9EAF3 /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32571A2E7DEC6ACC65A4817D /* SessionError.swift */; };
 		68B2E92268BC2B475DF92D2A /* MappingRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA544323D548C87539455B3 /* MappingRelationship.swift */; };
-		6A90190D91455D0AFB6330FC /* AutoHashable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E334DE224B5DA8EE4B86349 /* AutoHashable.generated.swift */; };
 		6BE6DCAC4724B54C27A9574E /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC001968415206DD702A672 /* NetworkSession.swift */; };
 		73D5F2C99EA6CC6CAAA5FADE /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B641AD8903358D74D5BB213 /* Mapping.swift */; };
 		73EE5F9733D16ECBF62061F4 /* NetworkSessionNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD416BB682E59CAE6CD4556 /* NetworkSessionNetworkError.swift */; };
-		74C06E043123F185BE3FDB15 /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D93030140766BE44FBE35BA /* Any.swift */; };
 		759B85B948787B866E82428E /* NetworkSessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D856BDB6B1111D8D0A4564 /* NetworkSessionError.swift */; };
 		76E58635B70DA95F4ADFD79F /* StorageMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D20A89E466D8627D0A88305 /* StorageMapping.swift */; };
 		7946310C50C62651EE3ECB7C /* MappingAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2257F2E483407657FB5BA368 /* MappingAttribute.swift */; };
@@ -107,7 +104,6 @@
 		5C05A6972400BB31DFADB3EF /* RemoteErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorFactory.swift; sourceTree = "<group>"; };
 		5C16E26DC94BC396640916F8 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainSwift.framework; sourceTree = "<group>"; };
 		5D3C15F8C64370E76097D526 /* NetworkMultipartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMultipartRequest.swift; sourceTree = "<group>"; };
-		5E334DE224B5DA8EE4B86349 /* AutoHashable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHashable.generated.swift; sourceTree = "<group>"; };
 		5FCE7431872ECF562986EAEC /* PromisedRepositoryFRC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedRepositoryFRC.swift; sourceTree = "<group>"; };
 		612E32A31A4CF6E31B53D639 /* PromisedRemoteSourceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedRemoteSourceResponse.swift; sourceTree = "<group>"; };
 		62E35AF6510A432D5890F544 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
@@ -119,7 +115,6 @@
 		8502006820A684ACD9EEC84D /* PromisedRepoWithRSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedRepoWithRSource.swift; sourceTree = "<group>"; };
 		8DC001968415206DD702A672 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		92BD486B99A357B693EA7B78 /* ObjectArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectArray.swift; sourceTree = "<group>"; };
-		9D93030140766BE44FBE35BA /* Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
 		9F0B90C4FC0BFCAE24A68AE6 /* StorageSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSourceImpl.swift; sourceTree = "<group>"; };
 		A1AEDC87AE6C68E46CE938AF /* RepositorySource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RepositorySource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24F0ABF7EA9F6EEF3272707 /* PromisedCoreDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedCoreDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -139,7 +134,6 @@
 		E9A8BA986786118A6DBAD5D5 /* BaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStorage.swift; sourceTree = "<group>"; };
 		ECAD9D1EB6B24A8229651154 /* HttpErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpErrors.swift; sourceTree = "<group>"; };
 		F027D0A5A591EAA0E111C1DB /* PromisedRemoteSourceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedRemoteSourceRequest.swift; sourceTree = "<group>"; };
-		F654697B5A1B2DD58EDD5DE0 /* MockPromisedRepositoryFRC.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPromisedRepositoryFRC.generated.swift; sourceTree = "<group>"; };
 		F7DFF95178F28DC749845FB5 /* PromisedCoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedCoreDataSource.swift; sourceTree = "<group>"; };
 		F8FF1018FC1A9C2415F683AE /* ApiErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrors.swift; sourceTree = "<group>"; };
 		FF75CAF8C716000A06D2DD5F /* NetworkSessionDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionDataError.swift; sourceTree = "<group>"; };
@@ -185,14 +179,6 @@
 				8DC001968415206DD702A672 /* NetworkSession.swift */,
 			);
 			path = NetworkSession;
-			sourceTree = "<group>";
-		};
-		21DD912F86BEBE5E1D42B5DD /* generated */ = {
-			isa = PBXGroup;
-			children = (
-				F654697B5A1B2DD58EDD5DE0 /* MockPromisedRepositoryFRC.generated.swift */,
-			);
-			path = generated;
 			sourceTree = "<group>";
 		};
 		25E7FC299CFB540C3EDAB2FF /* Mapper */ = {
@@ -287,15 +273,6 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
-		915403FA1F351B858795229B /* mocks */ = {
-			isa = PBXGroup;
-			children = (
-				21DD912F86BEBE5E1D42B5DD /* generated */,
-				9D93030140766BE44FBE35BA /* Any.swift */,
-			);
-			path = mocks;
-			sourceTree = "<group>";
-		};
 		91CC80B720C687C48ABE0135 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,10 +296,8 @@
 			children = (
 				9480C4DE95D3F1B64700201D /* DataLayer */,
 				91CC80B720C687C48ABE0135 /* DomainLayer */,
-				915403FA1F351B858795229B /* mocks */,
 				E5431869465B57AC2328F21B /* ServiceLayer */,
 				C313DC586652B5136C58DE53 /* AutoEquatable.generated.swift */,
-				5E334DE224B5DA8EE4B86349 /* AutoHashable.generated.swift */,
 				D1FD8C1A78DAFFC1BD689355 /* Info.plist */,
 			);
 			path = RepositorySource;
@@ -477,8 +452,6 @@
 			buildConfigurationList = 6F7EA1D8D1A0550524590FFA /* Build configuration list for PBXNativeTarget "RepositorySource" */;
 			buildPhases = (
 				33FC74C3EAF388556512E6A8 /* Run Script. Generate Equtables */,
-				3A342D14B740B579D4E32536 /* Run Script. Generate Hashable */,
-				B2B58D39DFC8C17F97980696 /* Run Script. Generate Mock */,
 				E36B0CF329604AE3F4A8F99A /* Sources */,
 				F490F00C82EADE5D71A485C2 /* Frameworks */,
 			);
@@ -509,6 +482,7 @@
 			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				ru,
 				en,
 			);
 			mainGroup = 42524238983FCE0629AFFE5C;
@@ -539,42 +513,6 @@
 			shellPath = /bin/sh;
 			shellScript = "sourcery --disableCache --config \"${SRCROOT}/sourcery_auto_equatable.yml\"";
 		};
-		3A342D14B740B579D4E32536 /* Run Script. Generate Hashable */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script. Generate Hashable";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sourcery --disableCache --config \"${SRCROOT}/sourcery_auto_hashable.yml\"";
-		};
-		B2B58D39DFC8C17F97980696 /* Run Script. Generate Mock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script. Generate Mock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sourcery --disableCache --config \"${SRCROOT}/sourcery_mocks.yml\"";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -582,10 +520,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C06E043123F185BE3FDB15 /* Any.swift in Sources */,
 				FC8292A65395F6E1215BB878 /* ApiErrors.swift in Sources */,
 				1FFEBC699679A6529B03C9D6 /* AutoEquatable.generated.swift in Sources */,
-				6A90190D91455D0AFB6330FC /* AutoHashable.generated.swift in Sources */,
 				D17B6F60D52053472D588A93 /* BaseJsonTransformer.swift in Sources */,
 				1B2CA9BB63006C67DE91B616 /* BasePromisedDataObserver.swift in Sources */,
 				1C18C0A4677681592FA62193 /* BaseStorage.swift in Sources */,
@@ -597,7 +533,6 @@
 				7946310C50C62651EE3ECB7C /* MappingAttribute.swift in Sources */,
 				E3D01EB47D6EC7CDC2C777C8 /* MappingContext.swift in Sources */,
 				68B2E92268BC2B475DF92D2A /* MappingRelationship.swift in Sources */,
-				2CC72DA0AA5A546490DC189C /* MockPromisedRepositoryFRC.generated.swift in Sources */,
 				F0BB43C7157F47D25F1915AF /* NetworkMultipartRequest.swift in Sources */,
 				02C91E6690A15D72DDA91FEF /* NetworkRequest.swift in Sources */,
 				C5C20EF134F2CF68ED212055 /* NetworkRequestAuthProvider.swift in Sources */,
