@@ -1,3 +1,5 @@
 import Foundation
 
-public struct SessionError: Error {}
+public struct SessionError: Error {
+    public init() {}
+}
