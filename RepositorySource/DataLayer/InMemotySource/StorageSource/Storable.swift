@@ -1,6 +1,8 @@
 import Foundation
 
 open class Storable: Equatable, Decodable {
+    public init() { }
+    
     open func primaryKey() -> String {
         fatalError("does not implimented")
     }
