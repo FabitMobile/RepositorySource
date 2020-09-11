@@ -6,8 +6,20 @@ struct NilLoaderError: Error {}
 struct IsLoadingError: Error {}
 struct CancelledError: Error {}
 
+public struct OffsetLimitPaginatorData {
+    
+    let loadedIds: [Any]
+    let total: Int
+    
+    public init(loadedIds: [Any],
+                total: Int) {
+        self.loadedIds = loadedIds
+        self.total = total
+    }
+}
+
 public class OffsetLimitPaginator {
-    public typealias LoaderClosure = (_ offset: Int, _ limit: Int) -> Promise<PromisedRemoteSourceResponse>
+    public typealias LoaderClosure = (_ offset: Int, _ limit: Int) -> Promise<OffsetLimitPaginatorData>
     public typealias LoadedAllObjectsClosure = () -> Void
 
     public var observer: PromisedDataObserverByIds
@@ -54,19 +66,17 @@ public class OffsetLimitPaginator {
         let offset = nextOffset
         let limit = self.limit
         return loader(offset, limit)
-            .then { [weak self] (response) -> Promise<PromisedRemoteSourceResponse> in
+            .then { [weak self] (response) -> Promise<OffsetLimitPaginatorData> in
                 guard let __self = self else { throw NilSelfError() }
                 guard offset == __self.nextOffset else { throw CancelledError() }
 
-                if let ids = response.loadedIdentifiers {
-                    __self.observer.appendIds(ids)
-                    __self.nextOffset += __self.limit
+                __self.observer.appendIds(response.loadedIds)
+                __self.nextOffset += __self.limit
 
-                    if ids.count < __self.limit,
-                        let onLoadedAllObjects = __self.onLoadedAllObjects {
-                        DispatchQueue.main.async {
-                            onLoadedAllObjects()
-                        }
+                if __self.nextOffset >= response.total,
+                    let onLoadedAllObjects = __self.onLoadedAllObjects {
+                    DispatchQueue.main.async {
+                        onLoadedAllObjects()
                     }
                 }
 
