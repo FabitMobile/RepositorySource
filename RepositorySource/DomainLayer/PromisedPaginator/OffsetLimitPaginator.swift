@@ -8,8 +8,8 @@ struct CancelledError: Error {}
 
 public struct OffsetLimitPaginatorData {
     
-    let loadedIds: [Any]
-    let total: Int
+    public let loadedIds: [Any]
+    public let total: Int
     
     public init(loadedIds: [Any],
                 total: Int) {
