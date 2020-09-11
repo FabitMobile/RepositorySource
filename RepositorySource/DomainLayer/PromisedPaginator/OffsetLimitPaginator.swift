@@ -18,8 +18,10 @@ public struct OffsetLimitPaginatorData {
     }
 }
 
+public typealias OffsetLimitPaginatorLoaderResponse = (PromisedRemoteSourceResponse, OffsetLimitPaginatorData)
+
 public class OffsetLimitPaginator {
-    public typealias LoaderClosure = (_ offset: Int, _ limit: Int) -> Promise<OffsetLimitPaginatorData>
+    public typealias LoaderClosure = (_ offset: Int, _ limit: Int) -> Promise<OffsetLimitPaginatorLoaderResponse>
     public typealias LoadedAllObjectsClosure = () -> Void
 
     public var observer: PromisedDataObserverByIds
@@ -47,7 +49,7 @@ public class OffsetLimitPaginator {
     // MARK: - load
 
     public func refresh(loader: @escaping LoaderClosure,
-                        onLoadedAllObjects: @escaping LoadedAllObjectsClosure) -> Promise<Void> {
+                        onLoadedAllObjects: @escaping LoadedAllObjectsClosure) -> Promise<PromisedRemoteSourceResponse> {
         self.loader = loader
         self.onLoadedAllObjects = onLoadedAllObjects
 
@@ -58,7 +60,7 @@ public class OffsetLimitPaginator {
         return loadNext()
     }
 
-    public func loadNext() -> Promise<Void> {
+    public func loadNext() -> Promise<PromisedRemoteSourceResponse> {
         guard let loader = loader else { return Promise(error: NilLoaderError()) }
         guard !isLoadingNextPage.value else { return Promise(error: IsLoadingError()) }
         isLoadingNextPage.value = true
@@ -66,14 +68,14 @@ public class OffsetLimitPaginator {
         let offset = nextOffset
         let limit = self.limit
         return loader(offset, limit)
-            .then { [weak self] (response) -> Promise<OffsetLimitPaginatorData> in
+            .then { [weak self] (response) -> Promise<PromisedRemoteSourceResponse> in
                 guard let __self = self else { throw NilSelfError() }
                 guard offset == __self.nextOffset else { throw CancelledError() }
 
-                __self.observer.appendIds(response.loadedIds)
+                __self.observer.appendIds(response.1.loadedIds)
                 __self.nextOffset += __self.limit
 
-                if __self.nextOffset >= response.total,
+                if __self.nextOffset >= response.1.total,
                     let onLoadedAllObjects = __self.onLoadedAllObjects {
                     DispatchQueue.main.async {
                         onLoadedAllObjects()
@@ -81,7 +83,7 @@ public class OffsetLimitPaginator {
                 }
 
                 __self.isLoadingNextPage.value = false
-                return Promise.value(response)
-            }.asVoid()
+                return Promise.value(response.0)
+            }
     }
 }
