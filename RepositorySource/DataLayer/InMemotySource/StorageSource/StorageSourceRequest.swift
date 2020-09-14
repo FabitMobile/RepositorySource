@@ -1,15 +1,11 @@
 import Foundation
 
-public typealias SortPredicate = (Storable) -> Bool
+public typealias SortPredicate<T: Storable> = (T) -> Bool
 
-public class StorageSourceRequest {
-    public var entity: Storable.Type
-    public var predicate: SortPredicate?
+public class StorageSourceRequest<T: Storable> {
+    public var predicate: SortPredicate<T>?
 
-    public init(entity: Storable.Type,
-                predicate: SortPredicate? = nil) {
-        self.entity = entity
-
+    public init(predicate: SortPredicate<T>? = nil) {
         self.predicate = predicate
     }
 }

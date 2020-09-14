@@ -37,16 +37,12 @@ open class BaseStorage: Storage {
         }
     }
 
-    open func fetch<T: Storable>(predicate: @escaping SortPredicate) -> Promise<[T]> {
+    open func fetch<T: Storable>(predicate: @escaping SortPredicate<T>) -> Promise<[T]> {
         objectArray(onQueue: dataAccessQueue)
             .then(on: dataAccessQueue, flags: nil) { (array: ObjectArray<T>) -> Promise<[T]> in
                 let result: [T] = array.value.filter { predicate($0) }
                 return Promise.value(result)
             }
-    }
-
-    open func fetch<T: Storable>(type: T.Type, predicate: @escaping SortPredicate) -> Promise<[T]> {
-        fetch(predicate: predicate)
     }
 
     open func insertOrUpdate<T: Storable>(elements: [T]) -> Promise<Void> {
@@ -73,7 +69,7 @@ open class BaseStorage: Storage {
             }
     }
 
-    open func delete<T: Storable>(type: T.Type, predicate: @escaping SortPredicate) -> Promise<Void> {
+    open func delete<T: Storable>(predicate: @escaping SortPredicate<T>) -> Promise<Void> {
         objectArray(onQueue: dataAccessQueue)
             .then(on: dataAccessQueue, flags: nil) { [weak self] (array: ObjectArray<T>) -> Promise<Void> in
                 guard let __self = self else { throw NilSelfError() }

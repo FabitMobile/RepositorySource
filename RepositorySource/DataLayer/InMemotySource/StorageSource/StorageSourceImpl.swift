@@ -7,11 +7,9 @@ public class StorageSourceImpl: StorageSource {
     var notificationCenter: NotificationCenter
 
     var dataImportQueue: DispatchQueue
-    private var truePredicate: SortPredicate
 
     public init(storage: Storage,
                 notificationCenter: NotificationCenter) {
-        truePredicate = { _ in true }
         self.storage = storage
         self.notificationCenter = notificationCenter
 
@@ -20,18 +18,18 @@ public class StorageSourceImpl: StorageSource {
 
     // MARK: - API
 
-    public func fetchData<T: Storable>(_ request: StorageSourceRequest) -> Promise<[T]> {
-        storage.fetch(predicate: request.predicate ?? truePredicate)
+    public func fetchData<T: Storable>(_ request: StorageSourceRequest<T>) -> Promise<[T]> {
+        storage.fetch(predicate: request.predicate ?? { _ in true })
     }
 
-    public func makeFrc<T>(_ request: StorageSourceRequest) -> StorageSourceFRC<T> {
+    public func makeFrc<T>(_ request: StorageSourceRequest<T>) -> StorageSourceFRC<T> {
         StorageSourceFRC(storage: storage,
                          request: request,
                          notificationCenter: notificationCenter)
     }
 
-    public func delete(_ request: StorageSourceRequest) -> Promise<Void> {
-        storage.delete(type: request.entity, predicate: request.predicate ?? truePredicate)
+    public func delete<T: Storable>(_ request: StorageSourceRequest<T>) -> Promise<Void> {
+        storage.delete(predicate: request.predicate ?? { _ in true })
     }
 
     public func insertOrUpdate<T: Storable>(_ objects: [T]) -> Promise<Void> {
@@ -59,7 +57,7 @@ public class StorageSourceImpl: StorageSource {
 
             var resultObjects: [T] = mappedObjects.compactMap { $0 as T }
 
-            if let oldObjects: [T] = try? __self.storage.fetch(predicate: __self.truePredicate).wait() {
+            if let oldObjects: [T] = try? __self.storage.fetch(predicate: { _ in true }).wait() {
                 let newObjectsKeys: [String] = mappedObjects.map { $0.primaryKey() }
 
                 let predicate = { (obj: T) -> Bool in

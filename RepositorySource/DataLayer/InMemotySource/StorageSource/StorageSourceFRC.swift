@@ -7,14 +7,14 @@ extension NSNotification.Name {
 
 open class StorageSourceFRC<T: Storable>: NSObject {
     fileprivate var storage: Storage
-    fileprivate var request: StorageSourceRequest
+    fileprivate var request: StorageSourceRequest<T>
     fileprivate var notificationCenter: NotificationCenter
-    fileprivate var cachedObjects: [Storable]
+    fileprivate var cachedObjects: [T]
 
     fileprivate var queue: DispatchQueue
 
     public init(storage: Storage,
-                request: StorageSourceRequest,
+                request: StorageSourceRequest<T>,
                 notificationCenter: NotificationCenter) {
         self.storage = storage
         self.request = request
@@ -43,7 +43,7 @@ open class StorageSourceFRC<T: Storable>: NSObject {
                 let delegate = __self.delegate else { return }
 
             let result = __self.objects().wait()
-            guard let objects = result as? [Storable],
+            guard let objects = result as? [T],
                 objects != __self.cachedObjects else { return }
 
             __self.cachedObjects = objects
@@ -73,9 +73,9 @@ extension StorageSourceFRC: PromisedRepositoryFRC {
         Guarantee(resolver: { [weak self] seal in
             guard let __self = self else { return }
 
-            let predicate = __self.request.predicate ?? { _ in true }
+            let predicate = __self.request.predicate
 
-            __self.storage.fetch(type: T.self, predicate: predicate)
+            __self.storage.fetch(predicate: predicate ?? { _ in true })
                 .done { objects in
                     seal(objects)
                 }

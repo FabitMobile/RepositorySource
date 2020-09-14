@@ -11,13 +11,13 @@ public protocol StorageSource {
     ///
     /// - Parameter request:
     /// - Returns: a promise to be fulfilled
-    func fetchData<T: Storable>(_ request: StorageSourceRequest) -> Promise<[T]>
+    func fetchData<T: Storable>(_ request: StorageSourceRequest<T>) -> Promise<[T]>
 
     /// Makes Storage frc
     ///
     /// - Parameter request:
     /// - Returns: Storage frc
-    func makeFrc<T>(_ request: StorageSourceRequest) -> StorageSourceFRC<T>
+    func makeFrc<T>(_ request: StorageSourceRequest<T>) -> StorageSourceFRC<T>
 
     // MARK: delete
 
@@ -25,7 +25,7 @@ public protocol StorageSource {
     ///
     /// - Parameter request:
     /// - Returns: a promise to finish operation
-    func delete(_ request: StorageSourceRequest) -> Promise<Void>
+    func delete<T: Storable>(_ request: StorageSourceRequest<T>) -> Promise<Void>
 
     // MARK: save
 

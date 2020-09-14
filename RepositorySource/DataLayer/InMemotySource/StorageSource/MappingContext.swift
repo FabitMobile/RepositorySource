@@ -9,7 +9,7 @@ class MappingContext {
     }
 
     func object<T: Storable>(primaryKey: String, value: Any) -> Promise<T> {
-        let predicate: SortPredicate = { $0.primaryValue() == "\(value)" }
+        let predicate: SortPredicate<T> = { $0.primaryValue() == "\(value)" }
         return storage.fetch(predicate: predicate).firstValue
     }
 
