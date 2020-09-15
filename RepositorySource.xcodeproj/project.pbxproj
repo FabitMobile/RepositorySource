@@ -33,6 +33,7 @@
 		555C72000A3D0B94FD37AD93 /* StorageSourceFRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BEC03D91DDD1E48A42360 /* StorageSourceFRC.swift */; };
 		5CF25AB95C19AA79F96E4CDA /* PromisedRemoteSourceErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733E4EA12ADD693B5A18F17 /* PromisedRemoteSourceErrorHandler.swift */; };
 		5F2F7B0FA3383F3129B9EAF3 /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32571A2E7DEC6ACC65A4817D /* SessionError.swift */; };
+		65D812AB250FBBA7003C1523 /* PromisedCoreDataSourceSaveOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D812AA250FBBA7003C1523 /* PromisedCoreDataSourceSaveOperation.swift */; };
 		68B2E92268BC2B475DF92D2A /* MappingRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA544323D548C87539455B3 /* MappingRelationship.swift */; };
 		6BE6DCAC4724B54C27A9574E /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC001968415206DD702A672 /* NetworkSession.swift */; };
 		73D5F2C99EA6CC6CAAA5FADE /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B641AD8903358D74D5BB213 /* Mapping.swift */; };
@@ -106,6 +107,7 @@
 		5FCE7431872ECF562986EAEC /* PromisedRepositoryFRC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedRepositoryFRC.swift; sourceTree = "<group>"; };
 		612E32A31A4CF6E31B53D639 /* PromisedRemoteSourceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedRemoteSourceResponse.swift; sourceTree = "<group>"; };
 		62E35AF6510A432D5890F544 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		65D812AA250FBBA7003C1523 /* PromisedCoreDataSourceSaveOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromisedCoreDataSourceSaveOperation.swift; sourceTree = "<group>"; };
 		6799EB6D119048A484D487D6 /* PromisedRemoteSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisedRemoteSource.swift; sourceTree = "<group>"; };
 		6BFC61F5AEF0C41C0949CD22 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		6CB291B9BE65917B4B91DDF6 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				05EB266DC9D48E5979533D49 /* PromisedCoreDataSourceFRC.swift */,
 				A24F0ABF7EA9F6EEF3272707 /* PromisedCoreDataSourceImpl.swift */,
 				3AA09309A01FBFB983758E77 /* PromisedCoreDataSourceRequest.swift */,
+				65D812AA250FBBA7003C1523 /* PromisedCoreDataSourceSaveOperation.swift */,
 			);
 			path = CoreDataSource;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				FACB9826E5FCD0F1710CEFF9 /* NetworkSessionDataError.swift in Sources */,
 				759B85B948787B866E82428E /* NetworkSessionError.swift in Sources */,
 				4F63BA69D46D1F688B0EF0A0 /* NetworkSessionJSONError.swift in Sources */,
+				65D812AB250FBBA7003C1523 /* PromisedCoreDataSourceSaveOperation.swift in Sources */,
 				73EE5F9733D16ECBF62061F4 /* NetworkSessionNetworkError.swift in Sources */,
 				FE8CDD9120B75ED4315C7A14 /* NetworkSessionTaskCancelledError.swift in Sources */,
 				2A690C716787B7EC280FAC8C /* ObjectArray.swift in Sources */,
@@ -578,7 +582,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.fabit.Lib.RepositorySource;
 				PRODUCT_MODULE_NAME = RepositorySource;
 				SDKROOT = iphoneos;
@@ -724,7 +728,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.fabit.Lib.RepositorySource;
 				PRODUCT_MODULE_NAME = RepositorySource;
 				SDKROOT = iphoneos;
