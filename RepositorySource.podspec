@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
   s.dependency 'FastEasyMapping', '~> 1.0'
   s.dependency 'PromiseKit', '~> 6.0'
   s.dependency 'FoundationExtension', '~> 1.0.3'
+  s.dependency 'ReachabilitySwift', "~> 5.0" 
 
 
 end
