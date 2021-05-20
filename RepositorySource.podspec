@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RepositorySource'
-  s.version          = '3.2.0'
+  s.version          = '4.0.0'
   s.summary          = 'CoreData/UrlSession wrapper'
   s.homepage         = 'https://github.com/FabitMobile/RepositorySource.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -21,6 +21,5 @@ Pod::Spec.new do |s|
   
   s.dependency 'FastEasyMapping', '~> 1.0'
   s.dependency 'PromiseKit', '~> 6.0'
-  s.dependency 'FoundationExtension', '~> 2.0'
   s.dependency 'ReachabilitySwift', "~> 5.0" 
 end

@@ -36,7 +36,6 @@
 		65CB23E0251497C200043155 /* HttpErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB239C251497C200043155 /* HttpErrors.swift */; };
 		65CB23E1251497C200043155 /* RemoteErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB239D251497C200043155 /* RemoteErrorFactory.swift */; };
 		65CB23E2251497C200043155 /* RemoteServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB239E251497C200043155 /* RemoteServiceConfig.swift */; };
-		65CB23E3251497C200043155 /* OffsetLimitPaginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB23A1251497C200043155 /* OffsetLimitPaginator.swift */; };
 		65CB23E4251497C200043155 /* BasePromisedDataObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB23A3251497C200043155 /* BasePromisedDataObserver.swift */; };
 		65CB23E5251497C200043155 /* PromisedDataObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB23A4251497C200043155 /* PromisedDataObserver.swift */; };
 		65CB23E6251497C200043155 /* PromisedDataObserverByIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB23A5251497C200043155 /* PromisedDataObserverByIds.swift */; };
@@ -102,7 +101,6 @@
 		65CB239C251497C200043155 /* HttpErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpErrors.swift; sourceTree = "<group>"; };
 		65CB239D251497C200043155 /* RemoteErrorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteErrorFactory.swift; sourceTree = "<group>"; };
 		65CB239E251497C200043155 /* RemoteServiceConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteServiceConfig.swift; sourceTree = "<group>"; };
-		65CB23A1251497C200043155 /* OffsetLimitPaginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetLimitPaginator.swift; sourceTree = "<group>"; };
 		65CB23A3251497C200043155 /* BasePromisedDataObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePromisedDataObserver.swift; sourceTree = "<group>"; };
 		65CB23A4251497C200043155 /* PromisedDataObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromisedDataObserver.swift; sourceTree = "<group>"; };
 		65CB23A5251497C200043155 /* PromisedDataObserverByIds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromisedDataObserverByIds.swift; sourceTree = "<group>"; };
@@ -313,7 +311,6 @@
 		65CB23A0251497C200043155 /* PromisedPaginator */ = {
 			isa = PBXGroup;
 			children = (
-				65CB23A1251497C200043155 /* OffsetLimitPaginator.swift */,
 			);
 			path = PromisedPaginator;
 			sourceTree = "<group>";
@@ -559,7 +556,6 @@
 				65CB23F1251497C200043155 /* MappingContext.swift in Sources */,
 				65CB23CF251497C200043155 /* NetworkSessionError.swift in Sources */,
 				65CB23F5251497C200043155 /* PromisedRemoteSourceResponse.swift in Sources */,
-				65CB23E3251497C200043155 /* OffsetLimitPaginator.swift in Sources */,
 				65CB23FC251497C200043155 /* PromisedCoreDataSource.swift in Sources */,
 				65CB23F8251497C200043155 /* PromisedRemoteSourceRequest.swift in Sources */,
 			);
