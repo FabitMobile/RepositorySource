@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		08198F3F910802B2FCCC646C /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C16E26DC94BC396640916F8 /* KeychainSwift.framework */; };
-		3262FA68BB2D3A806E144B04 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB3FE0C30F4E68FF3172219 /* FoundationExtension.framework */; };
 		4EA0BB471DC86925C2E8EAC9 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF66CAF3AE4BEC97074F3C21 /* MBProgressHUD.framework */; };
 		65CB23C9251497C200043155 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB237C251497C200043155 /* CoreDataService.swift */; };
 		65CB23CA251497C200043155 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB237F251497C200043155 /* NetworkResponse.swift */; };
@@ -132,7 +131,6 @@
 		65CB23C7251497C200043155 /* PromisedRepoWithRSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromisedRepoWithRSource.swift; sourceTree = "<group>"; };
 		65CB23C8251497C200043155 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1AEDC87AE6C68E46CE938AF /* RepositorySource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RepositorySource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFB3FE0C30F4E68FF3172219 /* FoundationExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FoundationExtension.framework; sourceTree = "<group>"; };
 		B2E94CB0E072E36F594B106E /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reachability.framework; sourceTree = "<group>"; };
 		CF66CAF3AE4BEC97074F3C21 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +143,6 @@
 				CBE538020B78B60A848520FC /* PromiseKit.framework in Frameworks */,
 				AF588BBCCE844E0B83BD6653 /* Reachability.framework in Frameworks */,
 				97909BB0BA5BAF8DE747B375 /* FastEasyMapping.framework in Frameworks */,
-				3262FA68BB2D3A806E144B04 /* FoundationExtension.framework in Frameworks */,
 				08198F3F910802B2FCCC646C /* KeychainSwift.framework in Frameworks */,
 				4EA0BB471DC86925C2E8EAC9 /* MBProgressHUD.framework in Frameworks */,
 				EDAF416BF277F36010C82119 /* PromiseKit.framework in Frameworks */,
@@ -302,17 +299,9 @@
 		65CB239F251497C200043155 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
-				65CB23A0251497C200043155 /* PromisedPaginator */,
 				65CB23A2251497C200043155 /* PromisedUseCase */,
 			);
 			path = DomainLayer;
-			sourceTree = "<group>";
-		};
-		65CB23A0251497C200043155 /* PromisedPaginator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PromisedPaginator;
 			sourceTree = "<group>";
 		};
 		65CB23A2251497C200043155 /* PromisedUseCase */ = {
@@ -444,7 +433,6 @@
 			isa = PBXGroup;
 			children = (
 				B75EB658CA0CB38278C85B7C /* Carthage */,
-				AFB3FE0C30F4E68FF3172219 /* FoundationExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
