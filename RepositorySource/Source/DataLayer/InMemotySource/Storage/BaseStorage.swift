@@ -1,5 +1,4 @@
 import Foundation
-import FoundationExtension
 import PromiseKit
 
 public class ObjectArrayNotFound: Error {}
