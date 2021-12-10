@@ -16,11 +16,13 @@ open class CoreDataService {
     open var mainContext: NSManagedObjectContext!
     var persistingContext: NSManagedObjectContext!
 
-    let dbSizeLimitBytes: Double = 50 * 1024 * 1024
+    let dbSizeLimitBytes: Double
     let notificationCenter: NotificationCenter
 
     public init(_ bundles: [Bundle] = [],
+                dbSizeLimitBytes: Double,
                 notificationCenter: NotificationCenter) {
+        self.dbSizeLimitBytes = dbSizeLimitBytes
         self.notificationCenter = notificationCenter
         setupCoreDataStack(bundles)
     }

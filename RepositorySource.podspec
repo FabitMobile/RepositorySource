@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RepositorySource'
-  s.version          = '3.1.1'
+  s.version          = '3.2.0'
   s.summary          = 'CoreData/UrlSession wrapper'
   s.homepage         = 'https://github.com/FabitMobile/RepositorySource.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
